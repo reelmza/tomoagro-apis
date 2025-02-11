@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/utils/PrismaClient";
 
-export const POST = async (req: NextRequest, res: NextResponse) => {
+export const POST = async (req: NextRequest) => {
   const body = await req.json();
   const { fullName, gender, sector, password, housing, salary } = body;
 

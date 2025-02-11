@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import prisma from "@/utils/PrismaClient";
 import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
@@ -65,8 +64,7 @@ export const PATCH = async (
 
 export const DELETE = async (
   req: NextRequest,
-  { params }: { params: Promise<{ target: string }> },
-  res: NextResponse
+  { params }: { params: Promise<{ target: string }> }
 ) => {
   const target = (await params).target;
 
