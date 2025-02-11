@@ -1,0 +1,40 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId // Auto
+
+  fullName String
+  gender   String
+  sector   String
+  isActive Boolean? @default(true) // Auto
+
+  staffId  String @unique // Auto 
+  password String
+
+  salary  Float?  @default(100000)
+  balance Float?  @default(100000)
+  housing String?
+
+  dateCreated DateTime? @default(now())
+}
+
+model Transaction {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  staffId String
+
+  type        String
+  amount      Float
+  status      String // System
+  description String
+  invoker     String? @default("system")
+
+  dateCreated DateTime? @default(now())
+}
