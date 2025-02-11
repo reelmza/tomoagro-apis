@@ -1,8 +1,14 @@
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        TOMOAGRO APIs
+    <div className="h-full flex items-center justify-center font-[family-name:var(--font-geist-sans)] ">
+      <main className="w-full h-full flex flex-col items-center justify-center">
+        <div className="text-center text-2xl font-bold tracking-tight">
+          Tomoagro Systems API
+        </div>
+
+        <p className="text-sm text-gray-600 text-center w-full mb-5">
+          Nothing here, observe the docs from whatsapp!
+        </p>
       </main>
     </div>
   );
