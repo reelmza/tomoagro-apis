@@ -71,7 +71,7 @@ export const DELETE = async (
   try {
     await prisma.user.delete({
       where: {
-        staffId: target,
+        staffId: "TMG/25/" + target,
       },
     });
 
