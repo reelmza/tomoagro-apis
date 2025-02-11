@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 export const GET = async (
   req: NextRequest,
-  res: NextResponse,
   { params }: { params: Promise<{ target: string }> }
 ) => {
   const target = (await params).target;

@@ -78,7 +78,7 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
   }
 };
 
-export const GET = async (req: NextRequest, res: NextResponse) => {
+export const GET = async () => {
   try {
     const transactions = await prisma.transaction.findMany();
     return NextResponse.json(transactions);
