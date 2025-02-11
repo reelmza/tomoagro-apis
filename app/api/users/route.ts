@@ -33,3 +33,13 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json("Server Error");
   }
 };
+
+export const GET = async () => {
+  try {
+    const targetUser = await prisma.user.findMany();
+    return NextResponse.json(targetUser);
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json("Server Error");
+  }
+};
